@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package prototest;
+option go_package = "github.com/2767mr/mcgo/prototest";
+
+service Foo {
+    rpc Bar(BarRequest) returns (Empty);
+}
+
+message BarRequest {
+    int32 id = 1;
+}
+
+message Empty {
+
+}
